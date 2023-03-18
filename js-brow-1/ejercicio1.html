@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Mayúsculas</title>
+  </head>
+  <body>
+    <label for="texto">Escribe algo:</label>
+    <input type="text" id="texto" />
+    <button class="btn" id ="button1">Convertir mensaje a mayusculas</button>
+    <p id="resultado"></p>
+    <p id="resultadoMayusculas"></p>
+    <script>
+      const input = document.querySelector("#texto");
+      const resultado = document.querySelector("#resultado");
+
+      const button = document.querySelector("#button1");
+      const resultado2 = document.getElementById("resultadoMayusculas");
+
+      // Para seleccionar el parrafo o el input sin usar el
+      //query.Selector se puede utilizar tambien el .getElementById
+      //O creo que menos especifico podria ser el .getElementsByClassName
+      //o el .getElementsByTagName o incluso .getElementsByName en el que
+      //tocaria ponerle el atributo name al name y al input
+
+      input.addEventListener("input", function () {
+        const texto = input.value.toUpperCase();
+        resultado.textContent = texto;      
+      });
+
+      button.addEventListener("click", function () {
+        // alert("Haz hecho clic en el botón!");
+        resultado2.textContent = resultado.textContent        
+      });
+
+     
+
+    </script>
+  </body>
+</html>
