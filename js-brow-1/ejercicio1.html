@@ -7,7 +7,7 @@
   <body>
     <label for="texto">Escribe algo:</label>
     <input type="text" id="texto" />
-    <button class="btn" id ="button1">Convertir mensaje a mayusculas</button>
+    <button class="btn" id="button1">Convertir mensaje a mayusculas</button>
     <p id="resultado"></p>
     <p id="resultadoMayusculas"></p>
     <script>
@@ -24,17 +24,14 @@
       //tocaria ponerle el atributo name al name y al input
 
       input.addEventListener("input", function () {
-        const texto = input.value.toUpperCase();
-        resultado.textContent = texto;      
+        let texto = input.value.toUpperCase();
+        resultado.textContent = texto;
       });
 
       button.addEventListener("click", function () {
-        // alert("Haz hecho clic en el botón!");
-        resultado2.textContent = resultado.textContent        
+        let texto = input.value.toUpperCase();
+        resultado2.textContent = texto;
       });
-
-     
-
     </script>
   </body>
 </html>
