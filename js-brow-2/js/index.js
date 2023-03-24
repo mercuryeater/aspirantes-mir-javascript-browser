@@ -9,7 +9,7 @@ add.addEventListener('click', function () {
     let addTask = tarea.value;    
     let label = document.createElement('label');
     let checkbox = document.createElement('input');
-    checkbox.setAttribute('type', 'checkbox')
+        checkbox.setAttribute('type', 'checkbox')
 
     let text = document.createTextNode(addTask);
 
@@ -21,6 +21,37 @@ add.addEventListener('click', function () {
     
 });
 
+/*
+CODIGO PROFESORA PARA COMPLETAR Y ADAPTAR
+
+const form = document.querySelector('form')
+const inputTask = document.getElementById('new-task')
+const listItems = document.querySelector('.list-items')
+
+function handleSubmit(event) {
+  event.preventDefault();
+  const task = inputTask.value;
+  // Creamos un fragmento para luego agregar al documento
+  const fragment = document.createDocumentFragment();
+  const inputText = document.createElement("input")
+  inputText.setAttribute('type', 'checkbox')
+  inputText.setAttribute('id', task)
+  const label = document.createElement("label")
+  label.setAttribute('for', task)
+  label.innerHTML = task
+  // falta agregar el atributo for con el mismo nombre del id del checkbox
+  // Falta hacer el appendChild del label que contiene el task
+const listItem = fragment
+  .appendChild(document.createElement("li"))
+  .appendChild(label)
+  .appendChild(inputText);
+  
+  // hacemos appendChild a la clase list-items
+  listItems.appendChild(fragment);
+}
+
+form.addEventListener('submit', handleSubmit)
+*/
 
 
 

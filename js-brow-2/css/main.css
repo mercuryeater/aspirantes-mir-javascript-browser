@@ -1,0 +1,53 @@
+body {
+  font-family: Helvetica, sans-serif;
+  background-color: rgb(167, 167, 167);
+}
+/* .bigBox {
+  position: relative;
+  width: 300px;
+  padding: 30px;
+  margin: 0 auto;
+  background: linear-gradient(#bd09b7, #6b4cf5);
+  box-shadow: 5px 5px 15px 4px rgb(235, 96, 96);
+  color: rgb(255, 255, 255);
+} */
+
+.caja {
+  margin: 0 auto;
+  padding: 5px;
+}
+
+#inputBox {
+  margin: 5px auto;
+  position: relative;
+  display: inline-block;
+  background: white;
+  padding: 5px;
+}
+
+#tarea {
+  background-color: aquamarine;
+  padding-right: 50px;
+  box-sizing: border-box;
+  width: 100%;
+  border: 0;
+}
+
+#add {
+  background-color: rgb(235, 80, 80);
+  color: wheat;
+  border-radius: 3px;
+  border: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  margin-top: 2px;
+  margin-right: 2px;
+}
+
+.caja {
+  margin: 5px auto;
+  background-color: white;
+  padding: 5px;
+}
