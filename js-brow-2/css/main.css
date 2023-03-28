@@ -12,42 +12,104 @@ body {
   color: rgb(255, 255, 255);
 } */
 
-.caja {
-  margin: 0 auto;
-  padding: 5px;
-}
+
 
 #inputBox {
   margin: 5px auto;
   position: relative;
-  display: inline-block;
+  display: block;
   background: white;
   padding: 5px;
+  max-width: 300px;
 }
+
+#box2 {
+  margin: 5px auto;
+  background-color: white;
+  padding: 5px;
+  position: relative;
+  display: block;
+  max-width: 300px;
+  min-height: 60px;
+}
+
 
 #tarea {
-  background-color: aquamarine;
-  padding-right: 50px;
-  box-sizing: border-box;
+  background-color: rgba(228, 255, 251, 0.801);
+  
+  box-sizing:border-box;
   width: 100%;
-  border: 0;
+  border: none;
+  height: 30px;
+  
+  position: relative;
 }
 
+
+
 #add {
-  background-color: rgb(235, 80, 80);
-  color: wheat;
-  border-radius: 3px;
+  background-color: rgb(226, 109, 109);
+  color: rgb(255, 243, 243);
+  border-radius: 5px;
   border: 0;
   position: absolute;
   top: 0;
   right: 0;
   z-index: 1;
-  margin-top: 2px;
-  margin-right: 2px;
+  margin-top: 9px;
+  margin-right: 10px;
+  padding: 5px 7px;
+  font-size: 10px;
 }
 
-.caja {
-  margin: 5px auto;
-  background-color: white;
-  padding: 5px;
+#delete {
+  background-color: rgb(117, 128, 226);
+  color: rgb(255, 243, 243);
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: 0;
+  position: absolute;
+  padding: 5px 7px;
+  font-size: 10px;
+  bottom: 0px;
+  
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#listBox {
+  box-sizing: border-box;
+  position: relative;
+  /* background-color:coral; */
+  top: 5px; 
+  width: auto;
+  margin-bottom: 40px;
+}
+
+
+ul {
+  list-style-type: none; 
+  padding: 0;
+  margin-top: 0;
+}
+
+hr {
+  color: blue;  
+  width: 95%;
+ 
+}
+
+#labelCheckbox {
+  position: relative;
+  
+  padding-left: 25px;
+}
+
+
+
+#check {
+  appearance: none;
+  position: absolute; 
+  left: 0;
+
 }
