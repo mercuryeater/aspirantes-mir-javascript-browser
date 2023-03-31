@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Local Storage</title>
+  </head>
+  <body>
+    <form>
+      <div>
+        <label for="name">Ingresa tu nombre</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="nombre"
+          required
+        />
+      </div>
+      <br />
+      <label for="email">Ingresa tu email</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="email"
+        required
+      />
+      <br />
+      <br />
+      <button type="submit">Guardar</button>
+    </form>
+    <section>
+      <form>
+        <p id="p-name"></p>
+        <p id="p-email"></p>
+        <button id="delete">Borrar datos</button>
+      </form>
+    </section>
+
+    <script>
+      // Obtener elementos del DOM
+      const form = document.querySelector("form");
+      const inputName = document.querySelector("#name");
+      const inputEmail = document.querySelector("#email");
+      const pName = document.querySelector("#p-name");
+      const pEmail = document.querySelector("#p-email");
+      const deleteBtn = document.querySelector("#delete");
+
+      // Agregando el objeto para el localStorage - bonus
+
+      // Manejar el evento de enviar el formulario
+      form.addEventListener("submit", (event) => {
+        localStorage.setItem("name", inputName.value);
+        localStorage.setItem("email", inputEmail.value);
+
+        const objLocalStorage = {};
+        objLocalStorage.name = inputName.value;
+        objLocalStorage.email = inputEmail.value;
+        const objJson = JSON.stringify(objLocalStorage);
+        localStorage.setItem("" , objJson);  
+        
+      });
+
+      // Función para mostrar el nombre guardado en localStorage
+      function showName() {
+        if (
+          localStorage.getItem("name") === null ||
+          localStorage.getItem("name") === ""
+        ) {
+          pName.innerHTML = "No hay datos guardados";
+        } else {
+          pName.innerHTML =
+            "El nombre guardado es: " + localStorage.getItem("name");
+          pEmail.innerHTML =
+            "El email guardado es: " + localStorage.getItem("email");
+        }
+      }
+
+      // Función para borrar el nombre guardado en localStorage
+      function deleteName() {
+        if (
+          localStorage.getItem("name") === "" ||
+          localStorage.getItem("name") === null
+        ) {
+          deleteBtn.style.display = "none";
+        } else {
+          deleteBtn.style.display = "block";
+          deleteBtn.addEventListener("click", (event) => {
+            localStorage.clear();
+          });
+        }
+      }
+
+      // Mostrar el nombre guardado al cargar la página
+      showName();
+      deleteName();
+    </script>
+  </body>
+</html>
